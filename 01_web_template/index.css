@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body,
+* {
+    font-family: "open sans";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-wrapper {
+    position: fixed;
+    width: fit-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.burger-icon {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    font-size: 4rem;
+    color: black;
+    z-index: 3;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+.menu-wrapper:has(.sidebar:hover) .burger-icon, .burger-icon:hover {
+    color: white;
+}
+
+.sidebar {
+    position: relative;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 15rem;
+    background-color: black;
+    color: white;
+    padding: 6rem 1rem 0 1rem;
+    box-sizing: border-box;
+    transition: left 0.3s ease-in-out;
+
+}
+
+.burger-icon:hover + .sidebar, .sidebar:hover {
+    left: 0;
+    box-shadow: 0,0,10px 1px black;
+}
+
+.sidebar a {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 1rem 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out,
+        transform 0.15s ease-in-out;
+
+}
+
+.sidebar a:hover {
+    opacity: 1;
+    transform: translateX(0.5rem);
+    filter: drop-shadow(0,0,10px white);
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* grid layout */
+    display: grid;
+    place-items: center;
+    /* vises først med klasen "show" */
+    position: fixed;
+    left: -100vw;
+    transition: all .6s ease-in-out;
+}
+
+.show {
+    left: 0;
+}
+
+/*all div's inside pages are here*/
+.page div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+}
+
+.page div.box{
+    width:60%;
+    height:60%;
+    padding:4rem;
+    border:1px solid lightskyblue;
+    place-items: center start;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 3rem;
+
+}
+
+#page2 {
+    grid-template-rows: 1fr, 3fr;
+
+}
+
+#page2 .top {
+    background-color: aqua;
+
+}
+
+#page2 .bottom {
+    background-color: green;
+    background-image: url(./assets/skies.jpg);
+    background-size: cover;
+}
+
+#page3 {
+    grid-template-columns: 1fr 1fr;
+}
+
+#page3 .left {
+    grid-template-rows: 1fr 3fr;
+}
+
+#page3 .left .bottom {
+    background-color: hotpink;
+}
+
+#page3 .right .box {
+    background-color: lightseagreen;
+    height: 50%;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+
+}
+
+#page3 .right .box .bottom {
+    background-image: url(./assets/skies.jpg);
+
+}
+
+#page4{
+    grid-template-columns: repeat(4,1fr);
+}
+
+#page4 .col:nth-child(1){
+    background-color: brown;
+
+}
+#page4 .col:nth-child(2){
+    background-color: orange;
+
+}
+#page4 .col:nth-child(3){
+    background-color: red;
+
+}
+#page4 .col:nth-child(4){
+    background-color: lightskyblue;
+
+}
+
+#page5 {
+    grid-template-columns: 1fr 1fr;
+}
+
+#page5 .right {
+    grid-template-rows:1fr 1fr;
+}
+
+#page5 .right .top{
+    background-color: hotpink;
+}
+
+#page5 .right .bottom{
+    background-color: black;
+    color:white;
+}
+
+#page6{
+    overflow:scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+#page6 .subPage{
+    height:100vh;
+    width:100vw;
+    scroll-snap-align: center;
+    border:1px solid black
+}
+
+#page7 .box{
+    padding-top:0;
+    overflow: scroll;
+    padding-bottom:60vh;
+}
+
+#page7 .box h1{
+    width:100%;
+    padding:2rem 0;
+    background:white;
+    opacity: .9;
+    position:sticky;
+    top:0;
+}
+
+#page8 .box{
+    overflow:scroll;
+    padding:0;
+}
+
+#page8 .box .parallax{
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#page8 .box .bg1{
+  background-image: url("./assets/girl.jpeg"); 
+}
+
+#page8 .box .bg2{
+  background-image: url("./assets/skies.jpg"); 
+}
+
+#page8 .box .bg3 {
+  background-image: url("./assets/lense2.png"); 
+}
+
+#page8 .box section {
+    width:100%;
+    height:40vh;
+    background-color: rgba(230, 180, 90, .5);
+    display:grid;
+    place-items:center;
+}
+
+#page9 .box{
+    overflow:scroll;
+    perspective: 2px;
+}
+
+#page9 .box .parallax {
+    position: absolute;
+    height:100vh;
+    width:100%;
+    /* Move the element back away from the camera,
+    * then scale it back up to fill the viewport.
+    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+}
+
+#page9 .box section{
+    border-radius: 2rem;
+    color:white;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+#page9 .box .bg{
+        background-image:url('./assets/background.png');
+        background-repeat: repeat-y;
+        height:10000px;
+        transform: translateZ(-4px) scale(8);
+        z-index:-3;
+        color:gray;
+    }
+#page9 .box .bg1{
+        background-image: url('./assets/planet1.png');
+        color:white;
+        display:grid;
+    }
+

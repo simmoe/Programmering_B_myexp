@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web template with p5.js</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+</head>
+
+<body>
+    <div class="menu-wrapper">
+        <div class="burger-icon">≡</div>
+        <div class="sidebar">
+        </div>
+    </div>
+    <main>
+        <div title="Grid Center" class="page show" id="page1">
+            <h1>Grid center</h1>
+        </div>
+        <div title="Horizontal Grid" class="page" id="page2">
+            <div class="top">
+                <h1> page 2 grid layout</h1>
+
+            </div>
+            <div class="bottom">
+            </div>
+        </div>
+
+        <div title="Two Column Grid" class="page" id="page3">
+
+            <div class="left">
+                <div class="top">
+                    <h1>top</h1>
+                </div>
+                <div class="bottom">
+                    <h1>bottom</h1>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="box">
+                    <div class="top">
+                        <h1>hi you</h1>
+                    </div>
+                    <div class="bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div title="4 Col Grid" class="page" id="page4">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div title="Grid with video" class="page" id="page5">
+            <div class="left">
+                <h1>Left</h1>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <h1>Top right</h1>
+                </div>
+                <div class="bottom">
+                    <h1>Bottom right</h1>
+                </div>
+            </div>
+        </div>
+        <div title="Scroll snap" class="page" id="page6">
+            <div class="subPage">
+                <div class="box">
+                    <h1>Page 1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dignissimos unde accusantium
+                        repellendus magni non, fuga deserunt obcaecati, ipsum voluptas dicta hic, corporis reprehenderit
+                        officia voluptatibus recusandae quae similique facilis?</p>
+                </div>
+            </div>
+            <div class="subPage">
+                <h1>Page 2</h1>
+            </div>
+            <div class="subPage">
+                <h1>Page 3</h1>
+            </div>
+            <div class="subPage">
+                <h1>Page 4</h1>
+            </div>
+        </div>
+        <div title="Sticky scroll" class="page" id="page7">
+            <div class="box">
+                <h1>Scroll to see</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <h1>Sticky headings</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <h1>That stay</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <h1>On top of things</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptas temporibus consectetur quod
+                    in non nisi amet voluptatibus minus! Iste dicta maxime fugiat suscipit libero nihil quo eos
+                    excepturi nemo.</p>
+            </div>
+        </div>
+        <div title="Simple parallax" class="page" id="page8">
+            <div class="box">
+                <div class="parallax bg1">
+                    <h1>Something...</h1>
+                </div>
+                <div class="parallax bg2">
+                    <h1>completely...</h1>
+                </div>
+                <div class="parallax bg3">
+                    <h1>different...</h1>
+                </div>
+            </div>
+        </div>
+
+        <div title="Real parallax" class="page" id="page9">
+            <div class="box">
+                <div class="parallax bg">
+                    <h1>Background</h1>
+                </div>
+                <div class="parallax bg1">
+                    <h1>Foreground</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
